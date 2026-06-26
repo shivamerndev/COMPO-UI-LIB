@@ -1,0 +1,10 @@
+.gitignore
+node_modules
+npm_recovery_codes.txt
+.npmrc
+dist
+todo.md
+project.md
+WEBSITE
+*.md
+.env
