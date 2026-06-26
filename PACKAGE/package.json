@@ -1,0 +1,34 @@
+{
+  "name": "compo-ui-lib",
+  "version": "1.0.9",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "typescript",
+    "tailwindcss",
+    "storybook",
+    "vite",
+    "eslint",
+    "prettier"
+  ],
+  "author": "SKS => shivam,khalid,shubham",
+  "license": "ISC",
+  "description": "A UI Component Library for React applications.",
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
