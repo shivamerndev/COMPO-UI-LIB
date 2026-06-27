@@ -7,4 +7,4 @@ todo.md
 project.md
 WEBSITE
 *.md
-.env
+**/.env
