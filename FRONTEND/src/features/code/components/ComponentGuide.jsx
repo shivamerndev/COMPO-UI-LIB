@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import Preview from "../pages/Preview";
 
 
 // ── Copy Button ──────────────────────────────────────────────
@@ -29,7 +30,7 @@ function CodeBlock({ children, language }) {
         <span className="text-xs text-slate-500 font-mono tracking-wide">{language}</span>
         <CopyButton text={children} />
       </div>
-      <pre className="px-5 py-4 text-sm text-slate-300 font-mono overflow-x-auto leading-relaxed whitespace-pre-wrap break-words">
+      <pre className="px-5 py-4 text-sm text-slate-300 font-mono overflow-x-auto leading-relaxed whitespace-pre-wrap wrap-break-word">
         {children}
       </pre>
     </div>
@@ -47,12 +48,12 @@ function SectionLabel({ children }) {
 }
 
 // ── Main ─────────────────────────────────────────────────────
-export default function ComponentGuide({ handleGetCompoById,compId }) {
-  
+export default function ComponentGuide({ handleGetCompoById, compId }) {
+
   const component = useSelector(state => state.component.currentComponent)
 
   useEffect(() => {
-    if(compId){
+    if (compId) {
       handleGetCompoById(compId)
     }
   }, [compId])
@@ -81,6 +82,15 @@ export default function App() {
     <${component.name} ${component.props[0]}={value}  ${component.props[1]}={value}  ${component.props[2]}={value} ${component.props[3]}={value} />
   )
 }`}</CodeBlock>
+      </section>
+
+
+      {/* Source Code */}
+      <section className="mb-12 ">
+        <SectionLabel>Preview</SectionLabel>
+        <div className="max-h-96 overflow-y-auto rounded-lg scrollbar-none">
+          <Preview code={component.code} />
+        </div>
       </section>
 
       {/* Props */}
