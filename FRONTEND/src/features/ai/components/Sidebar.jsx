@@ -25,8 +25,8 @@ const Sidebar = ({ props }) => {
     const { handleGetMyProjects, handleUpdateComponent } = useCompo()
     const navigate = useNavigate()
     const Components = useSelector(state => state.component.components)
-    const { handleWebBuilder } = useGenerate()
-    const { setSearchParams, webBuilder } = props
+    // const { handleWebBuilder } = useGenerate()
+    // const { setSearchParams, webBuilder } = props
 
     const [open, setOpen] = useState(true);
     const [selected, setSelected] = useState('my-project');
@@ -207,14 +207,14 @@ const Sidebar = ({ props }) => {
                 )}
             </div>
 
-
+{/* 
             <div className=' flex justify-center py-8'>
                 <div className='flex items-center gap-2 bg-slate-900/60 border border-slate-800/80 px-3 py-2 rounded-full hover:border-slate-800 transition-all duration-300 shadow-sm'>
                     <Earth size={15} className={`transition-colors duration-300 ${webBuilder ? 'text-cyan-400' : 'text-slate-400'}`} />
                     <span className={'text-xs  font-medium select-none' + (webBuilder && " text-cyan-500")}>Web Builder</span>
 
                     <button className={`relative cursor-pointer inline-flex h-5 w-10 items-center rounded-full transition-all duration-300 ease-out border border-white/10 ${webBuilder
-                        ? "bg-gradient-to-r from-violet-600 to-purple-500 shadow-lg shadow-violet-500/25"
+                        ? "bg-linear-to-r from-violet-600 to-purple-500 shadow-lg shadow-violet-500/25"
                         : "bg-slate-700/80 hover:bg-slate-600"
                         }`}
                         onClick={() => {
@@ -230,7 +230,7 @@ const Sidebar = ({ props }) => {
                         </span>
                     </button>
                 </div>
-            </div>
+            </div> */}
 
         </aside>
     );

@@ -1,3 +1,5 @@
+import { Clock, Trash2 } from "lucide-react"
+import { useState } from "react"
 
 const INITIAL_CHATS = [
   { id: 1, title: 'Create a Button Component', date: 'Today', tag: 'JSX' },
