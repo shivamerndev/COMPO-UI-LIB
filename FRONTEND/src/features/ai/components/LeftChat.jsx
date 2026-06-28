@@ -70,7 +70,7 @@ const LeftChat = ({ onNewChat, tokenCount = '999k', props }) => {
                       : 'text-[#7070a0] hover:bg-[#18181f] hover:text-[#a0a0c0]'
                     }`}
                 >
-                  <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-colors
+                  <div className={`w-1.5 h-1.5 rounded-full shrink-0 transition-colors
                     ${active === chat.id ? 'bg-violet-500' : 'bg-[#2d2d45]'}`}
                   />
 
@@ -85,7 +85,7 @@ const LeftChat = ({ onNewChat, tokenCount = '999k', props }) => {
 
                   <button
                     onClick={e => deleteChat(e, chat.id)}
-                    className="opacity-0 group-hover:opacity-100 p-1 rounded-lg hover:bg-red-950 text-[#3d3d55] hover:text-red-400 transition-all flex-shrink-0"
+                    className="opacity-0 group-hover:opacity-100 p-1 rounded-lg hover:bg-red-950 text-[#3d3d55] hover:text-red-400 transition-all shrink-0"
                     aria-label="Delete chat"
                   >
                     <Trash2 size={12} />

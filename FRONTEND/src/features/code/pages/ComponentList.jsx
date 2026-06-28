@@ -22,7 +22,7 @@ const ComponentList = () => {
       <Navbar />
 
       <div className="flex h-10/12 w-full">
-        <Sidebar setParams={setParams} />
+        <Sidebar compId={compId} setParams={setParams} />
         {compId ? <ComponentGuide handleGetCompoById={handleGetCompoById} compId={compId} /> : <GetStarted />}
       </div>
     </main>
